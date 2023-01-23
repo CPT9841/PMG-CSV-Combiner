@@ -33,7 +33,7 @@ class TestCsvCombiner extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test that the command will not execute if actual files aren't passed to it.
+     * Will excute this code if the files aren't passed on properly
      */
     public function testTheCommandWillFailWithoutRealFileParameters()
     {
@@ -49,8 +49,7 @@ class TestCsvCombiner extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Note that verifying the actual output is difficult as it is posted via fpassthru and can't be captured
-     * by the typical `getDisplay()` method. Verify by output buffering.
+     * Using fpassthru because it's hard to verify the actual output, so it will verify by output buffering
      */
     public function testTheCommandWillRunGivenRealFileParameters()
 	{
